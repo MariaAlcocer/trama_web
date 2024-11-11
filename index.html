@@ -563,18 +563,22 @@
     </div>
   </div>
 
-<!-- Icono del Carrito -->
-<div id="cart-icon" onclick="toggleCart()">
-  <img src="assets/img/cart.png" alt="Carrito de Compras" />
-  <span id="cart-count">0</span> <!-- Contador de items en el carrito -->
+<!-- Contenedor del Carrito -->
+<div id="cart-container">
+  <!-- Icono del Carrito -->
+  <div id="cart-icon" onclick="toggleCart()">
+    <img src="assets/img/cart.png" alt="Carrito de Compras" />
+    <span id="cart-count">0</span> <!-- Contador de items en el carrito -->
+  </div>
+
+  <!-- Panel Emergente del Carrito -->
+  <div id="cart-panel" class="hidden">
+    <h2>Tu Carrito</h2>
+    <div id="cart-items"></div>
+    <p onclick="checkout()" class="btn btn-checkout">Inscribirse a todos</p>
+  </div>
 </div>
 
-<!-- Panel Emergente del Carrito -->
-<div id="cart-panel" class="hidden">
-  <h2>Tu Carrito</h2>
-  <div id="cart-items"></div>
-  <p onclick="checkout()" class="btn btn-checkout">Inscribirse a todos</p>
-</div>
 
 
 

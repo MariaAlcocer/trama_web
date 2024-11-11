@@ -1035,6 +1035,54 @@ section {
   background: #ebebff;
 }
 
+/* Proyectos responsive design */
+@media (max-width: 768px) {
+  .proyectos .icon-box {
+    width: 100%; /* La caja ocupa el ancho completo */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 15px;
+    margin: 5px 0; /* Espacio vertical entre cajas */
+  }
+
+  .proyectos .projects-container-popup {
+    flex-direction: row; /* Las imágenes y el texto quedan en una sola columna */
+  }
+
+  .proyectos .project-img {
+    width: 60px; /* Redimensiona las imágenes */
+    height: auto;
+  }
+
+  .proyectos .link-project {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+
+  .timeline-information .accordion-item .card-body h4,
+  .timeline-information .accordion-item .card-body h6 {
+    font-size: 16px; /* Tamaño de texto para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos .icon-box {
+    padding: 10px;
+  }
+
+  .proyectos .project-img {
+    width: 50px; /* Redimensiona aún más las imágenes en pantallas pequeñas */
+  }
+
+  .proyectos .link-project {
+    font-size: 12px;
+  }
+
+  .timeline-information .accordion-item .card-body h4,
+  .timeline-information .accordion-item .card-body h6 {
+    font-size: 14px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Datos
 --------------------------------------------------------------*/
@@ -1277,7 +1325,7 @@ section {
   font-size: 16px;
 }
 
-/* Estilo para el botón "Comprar Todos" */
+/* Estilo para el botón de inscribirse */
 #cart-panel .btn-checkout {
   display: inline-block;
   padding: 10px 20px;
@@ -1299,6 +1347,56 @@ section {
   background-color: #020352;
 }
 
+/* Para celu */
+@media (max-width: 768px) {
+  #cart-panel {
+    width: 90vw; /* ncho al 90% de la pantalla */
+    right: 5vw; /* Centrar el panel */
+    bottom: 20px; 
+    max-height: 60vh; /* altura al 60% del viewport */
+    padding: 10px;
+  }
+
+  #cart-panel h2 {
+    font-size: 5vw; 
+  }
+
+  #cart-panel .btn-checkout {
+    width: 100%; /* Botón de ancho completo en dispositivos móviles */
+    padding: 10px;
+    font-size: 4vw; /* Tamaño de texto responsive */
+  }
+
+  #cart-icon img {
+    width: 8vw; /* Reduce el tamaño del icono */
+    height: auto;
+  }
+
+  #cart-count {
+    font-size: 3vw; /* Tamaño del contador ajustado */
+  }
+}
+
+@media (max-width: 480px) {
+  #cart-panel {
+    width: 95vw; /* Mayor ajuste para pantallas muy pequeñas */
+    right: 2.5vw;
+    bottom: 10px;
+    max-height: 70vh;
+  }
+
+  #cart-panel h2 {
+    font-size: 6vw;
+  }
+
+  #cart-panel .btn-checkout {
+    font-size: 5vw;
+  }
+
+  .trash-icon {
+    font-size: 4vw; /* Tamaño del icono de tacho ajustado */
+  }
+}
 
 
 /*--------------------------------------------------------------
