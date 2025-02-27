@@ -287,35 +287,3 @@ function checkout() {
 }
 
 
-// Llamada inicial para mostrar el contador actualizado al cargar la página
-document.addEventListener("DOMContentLoaded", updateCartCount);
-
-// Función para alternar la visibilidad del carrito
-function toggleCart() {
-  const cartPanel = document.getElementById("cart-panel");
-  cartPanel.classList.toggle("hidden");
-  displayCartItems();
-
-  // Agrega o elimina el evento de cierre fuera del carrito según su visibilidad
-  if (!cartPanel.classList.contains("hidden")) {
-    document.addEventListener("mousedown", closeCartOnClickOutside);
-  } else {
-    document.removeEventListener("mousedown", closeCartOnClickOutside);
-  }
-}
-
-// Función para cerrar el carrito al hacer clic fuera
-function closeCartOnClickOutside(event) {
-  const cartPanel = document.getElementById("cart-panel");
-  const cartIcon = document.getElementById("cart-icon");
-
-  // Si el clic no fue en el carrito ni en el ícono, cierra el carrito
-  if (!cartPanel.contains(event.target) && !cartIcon.contains(event.target)) {
-    cartPanel.classList.add("hidden"); // Cierra el carrito
-    document.removeEventListener("mousedown", closeCartOnClickOutside); // Remueve el evento
-  }
-}
-
-
-
-
